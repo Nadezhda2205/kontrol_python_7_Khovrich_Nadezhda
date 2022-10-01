@@ -20,7 +20,7 @@ def guestbooks_add_view(request:WSGIRequest):
             'choices': Guestbook.CHOICES,
             'form': form
             }  
-            return render(request=request, template_name='guestbooks.html', context=context)
+            return render(request=request, template_name='guestbooks_add.html', context=context)
 
         guestbook: Guestbook = Guestbook.objects.create(**form.cleaned_data)
         return redirect('guestbooks')
