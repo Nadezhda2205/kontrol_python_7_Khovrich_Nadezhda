@@ -16,7 +16,7 @@
     <h1>Вы точно хотите удалить запись в книге?</h1>
     <form action="{% url 'confirm_delete' guestbook.pk %}" method="POST">
         {% csrf_token %}
-        <p><a href="{% url 'guestbooks' %}">Нет</a></p>
-        <input type="submit" value="Да">
+        <p><a href="{% url 'guestbooks' %}"><button type="button" class="btn btn-success">Нет</button></a></p>
+        <input type="submit" class="btn btn-success" value="Да">
     </form>
 {% endblock %}
