@@ -3,6 +3,7 @@ from guestbook.models import Guestbook
 from django.core.handlers.wsgi import WSGIRequest
 from guestbook.forms import GuestbookForm
 
+
 def guestbooks_view(request):
     guestbooks = Guestbook.objects.order_by('-created_at').filter(status='active')
     context = {
