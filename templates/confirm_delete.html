@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Детальный просмотр 
+{% endblock %}
+
+
+ {% block content %}
+    <h5>Запись:</h5>
+        {{ guestbook.guestname }}
+    <h5>Email:<h5>
+        {{ guestbook.mail }}   
+    <h5>Текст:</h5>
+        {{ guestbook.text }}
+
+    <h1>Вы точно хотите удалить запись в книге?</h1>
+    <form action="{% url 'confirm_delete' guestbook.pk %}" method="POST">
+        {% csrf_token %}
+        <p><a href="{% url 'guestbooks' %}">Нет</a></p>
+        <input type="submit" value="Да">
+    </form>
+{% endblock %}

@@ -19,6 +19,8 @@
             <h5 class="card-title">{{ guestbook.guestname }}</h5>
             <p class="card-text">{{ guestbook.mail }}</p>
             <p class="card-text"><small class="text-muted">{{ guestbook.text }}</small></p>
+            <a href="{% url 'guestbooks_edit' guestbook.pk %}"><img src="" alt="">Редактирование</a>
+            <a href="{% url 'confirm_delete' guestbook.pk %}"><img src="" alt="">Удаление</a>
             </div>
         </div>
     </div>

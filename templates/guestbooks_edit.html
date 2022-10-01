@@ -1,18 +1,19 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    Новая запись в книге 
+    Редактирование записи 
 {% endblock %}
 
 
  {% block content %}
-    <h5>Новая запись в книге</h5>
+    <h5>Редактирование записи</h5>
     <form action="" method="POST">
         {% csrf_token %}
         
         {{ form.as_p }}
 
-<input type="submit" value="Добавить">
+<input type="submit" value="Сохранить">
 
     </form>
+
 {% endblock %}
