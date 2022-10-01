@@ -1,9 +1,9 @@
 
 from django.contrib import admin
 from django.urls import path
-from guestbook.views import guestsbook_view
+from guestbook.views import guestbooks_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', guestsbook_view, name='guestsbook'),
+    path('', guestbooks_view, name='guestbooks'),
 ]
